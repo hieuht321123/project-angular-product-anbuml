@@ -1,0 +1,16 @@
+<form *ngIf="product">
+    <legend>Add course</legend>
+
+    <div class="form-group">
+        <label for="">User Id</label>
+        <input type="text" class="form-control" id="" placeholder="Input field" [(ngModel)]="product.userId" [ngModelOptions]="{standalone: true}">
+    </div>
+    <div class="form-group">
+        <label for="">Title</label>
+        <input type="text" class="form-control" id="" placeholder="Input field" [(ngModel)]="product.title" [ngModelOptions]="{standalone: true}">
+    </div>
+
+
+
+    <button type="button" class="btn btn-primary" (click)="addProduct()">Add Course</button>
+</form>

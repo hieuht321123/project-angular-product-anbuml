@@ -1,0 +1,25 @@
+<button type="button" class="btn btn-primary" [routerLink]="['add']">Add Product</button>
+
+
+<table class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>User Id</th>
+            <th>Title</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of product">
+            <td>{{item.id}}</td>
+            <td>{{item.userId}}</td>
+            <td>{{item.title}}</td>
+            <td>
+                <button type="button" class="btn btn-primary" (click)="onDeleteProduct(item.id)">Delete</button>
+
+                <button type="button" class="btn btn-success" style="margin-left: 20px;" [routerLink]="[item.id,'detail']">Edit</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
